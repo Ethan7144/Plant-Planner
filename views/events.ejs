@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Plant Events</title>
+  </head>
+  <body>
+    <h1>Plant Events</h1>
+    <form action="/<%= plant._id %>/events" method="GET">
+      <div>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate">
+      </div>
+      <div>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate">
+      </div>
+      <button type="submit">Search</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Event Type</th>
+          <th>Description</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% events.forEach(event => { %>
+          <tr>
+            <td><%= event.date.toLocaleDateString() %></td>
+            <td><%= event.eventType %></td>
+            <td><%= event.description %></td>
+            <td>
+              <form action="/plants/<%= plant._id %>/events/<%= event._id %>" method="POST">
+                <input type="hidden" name="_method" value="DELETE">
+                <button type="submit">Delete</button>
+              </form>
+              
+              
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <a href="/plants/<%= plant._id %>/events/new">Create new event</a>
+    <a href="/">Go Home</a>
+  </body>
+</html>

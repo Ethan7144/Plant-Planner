@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Found Harvests</title>
+  </head>
+  <body>
+    <h1>Found Harvests</h1>
+    <% if (harvests.length > 0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Harvest Date</th>
+            <th>Weight</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% for (let harvest of harvests) { %>
+            <tr>
+              <td><%= harvest.date.toDateString() %></td>
+              <td><%= harvest.weight %></td>
+              <td><%= harvest.quantity %></td>
+            </tr>
+          <% } %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <p>No harvests found on the selected date.</p>
+    <% } %>
+    <a href="/harvestByDate">Back</a>
+  </body>
+</html>

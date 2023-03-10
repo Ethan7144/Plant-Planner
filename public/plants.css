@@ -1,0 +1,49 @@
+body{
+    font: times;
+    font-size: 20px;
+    color: black;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  td, th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  a {
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: skyblue;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  a.button {
+    display: inline-block;
+  }
+  
+  a.button:hover {
+    text-decoration: none;
+  }
+  
+  .box {
+    border: 1px solid #ddd;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Harvest</title>
+  </head>
+  <body>
+    <h1>Harvest</h1>
+    <form action="/<%= plant._id %>/harvest" method="GET">
+      <div>
+        <label for="startDate">Start Date:</label>
+        <input type="date" id="startDate" name="startDate">
+      </div>
+      <div>
+        <label for="endDate">End Date:</label>
+        <input type="date" id="endDate" name="endDate">
+      </div>
+      <button type="submit">Search</button>
+    </form>
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Weight</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% harvests.forEach(harvest => { %>
+          <tr>
+            <td><%= harvest.date.toLocaleDateString() %></td>
+            <td><%= harvest.weight %></td>
+            <td><%= harvest.quantity %></td>
+            <td>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    
+    <a href="/plants/<%= plant._id %>/harvests/new">Create new harvest</a>
+    <a href="/">Go Home</a>
+  </body>
+</html>

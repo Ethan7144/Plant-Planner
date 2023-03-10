@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title><%= plant ? plant.name : 'Plant Not Found' %></title>
+  <link rel="stylesheet" type="text/css" href="/foundplant.css">
+</head>
+<body>
+  <% if (plant) { %>
+    <h1><%= plant.name %></h1>
+    <p class = "headings">Species</p>
+    <p class = "responses"><%= plant.species%></p>
+    <p class = "headings">Cultivar</p>
+    <p class = "responses"><%= plant.cultivar %></p>
+    <p class = "headings"> Is the plant alive?</p>
+    <p class = "responses"><%= plant.isAlive %></p>
+  <% } else { %>
+    <h1>Plant Not Found</h1>
+  <% } %>
+  <a href="/">Go Home</a>
+</body>
+</html>

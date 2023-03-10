@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Plant Event</title>
+  </head>
+  <body>
+    <h1>New Plant Event</h1>
+    <form action = "/plants/<%= plant._id%>/events/new/<%= plant._id%>" method="POST">
+      <div>
+        <label for="eventType">Event Type:</label>
+        <input type="text" id="eventType" name="eventType" required>
+      </div>
+      <div>
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div>
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea>
+      </div>
+      <button type="submit">Create Event</button>
+    </form>
+    <a href="/">Go Home</a>
+  </body>
+</html>

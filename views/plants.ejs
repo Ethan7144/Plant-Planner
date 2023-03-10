@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Plants</title>
+  <link rel="stylesheet" type="text/css" href="/plants.css">
+</head>
+<body>
+  <h1>Plants</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Species</th>
+        <th>Cultivar</th>
+        <th>Is Alive</th>
+        <th>Edit Name</th>
+        <th>Status Update</th>
+        <th>View events</th>
+        <th>View Harvests</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% for(var i=0; i<plants.length; i++) { %>
+        <tr>
+          <td><%= plants[i].name %></td>
+          <td><%= plants[i].species %></td>
+          <td><%= plants[i].cultivar %></td>
+          <td><%= plants[i].isAlive %></td>
+          <td><a href="/plant/<%= plants[i]._id%>/name">Edit</a></td>
+          <td><a href="/plants/<%= plants[i]._id%>/status">Update Plant Status </a></td>
+          <td><a href="/plants/<%= plants[i]._id %>/events">Events</a></td>
+          <td><a href="/plants/<%= plants[i]._id %>/harvests">Harvests</a></td>
+
+        </tr>
+      <% } %>
+    </tbody>
+  </table>
+  <a href="/">Go Home</a>
+</body>
+</html>
