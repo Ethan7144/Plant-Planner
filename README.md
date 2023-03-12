@@ -9,7 +9,7 @@ First make sure you are connected to an actual database that follows the Models 
 
 This will start the web app and will display at 
 
-## localhost:3000
+### localhost:3000
 
 # Config
 This is how I am connecting to my Database, the token is hidden in a config.json file but the rest of the code shows how one would connect.
