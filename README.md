@@ -9,6 +9,6 @@ If you wish to use your own data following the same schema, you just replace tok
 This is the schemas for the database models for Plants, Events, and Harvests are stored. These are for reference for what each database model looks like and the names for each component.
 
 # Public
-The EJS files for how the pages would be displayed on the web browser, this is able to call from JS files to display all the info requested.
+The CSS files just for cosmetic purposes on each of the pages to make them look nicer and for the information to display in a nice way.
 
 
